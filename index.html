@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "tertiary-fixed-dim": "#b4c5ff", "secondary-container": "#fe932c", "inverse-primary": "#c1c7d1", "on-error": "#ffffff", "primary-fixed-dim": "#c1c7d1", "primary-fixed": "#dde3ed", "outline": "#75777b", "background": "#f9f9ff", "tertiary-fixed": "#dbe1ff", "surface-container-highest": "#dce2f7", "surface-bright": "#f9f9ff", "tertiary-container": "#00174b", "on-surface-variant": "#45474b", "surface-container-high": "#e1e8fd", "on-secondary-fixed-variant": "#6e3900", "primary-container": "#161c23", "surface-container-low": "#f1f3ff", "secondary-fixed": "#ffdcc3", "surface-tint": "#595f68", "surface": "#f9f9ff", "on-secondary-fixed": "#2f1500", "secondary-fixed-dim": "#ffb77d", "on-primary": "#ffffff", "surface-container": "#e9edff", "on-tertiary-fixed": "#00174b", "error-container": "#ffdad6", "on-error-container": "#93000a", "surface-dim": "#d3daef", "on-secondary-container": "#663500", "on-primary-fixed-variant": "#41474f", "on-primary-container": "#7e848d", "primary": "#000000", "on-tertiary-container": "#497cff", "on-tertiary": "#ffffff", "inverse-surface": "#293040", "on-primary-fixed": "#161c23", "on-secondary": "#ffffff", "on-background": "#141b2b", "surface-container-lowest": "#ffffff", "tertiary": "#000000", "on-surface": "#141b2b", "on-tertiary-fixed-variant": "#003ea8", "outline-variant": "#c5c6cb", "inverse-on-surface": "#edf0ff", "error": "#ba1a1a", "secondary": "#904d00", "surface-variant": "#dce2f7" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "gutter": "1.5rem", "gutter-mobile": "1rem", "margin": "2rem", "space-sm": "0.5rem", "gutter-desktop": "2rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "margin-desktop": "4rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Space Grotesk"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Space Grotesk"], "label-md": ["Plus Jakarta Sans"], "display-hero": ["Space Grotesk"], "display-hero-mobile": ["Space Grotesk"], "label-caps": ["Space Grotesk"], "body-md": ["Plus Jakarta Sans"], "headline-xl": ["Space Grotesk"], "headline-lg": ["Space Grotesk"] }, "fontSize": { "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "30px", "letterSpacing": "-0.015em", "fontWeight": "500" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500" }], "display-hero": ["72px", { "lineHeight": "76px", "letterSpacing": "-0.03em", "fontWeight": "400" }], "display-hero-mobile": ["40px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "400" }], "label-caps": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-xl": ["48px", { "lineHeight": "54px", "letterSpacing": "-0.025em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "500" }] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-lg"><a class="flex items-center gap-space-sm" data-path="architecture" href="#"><img alt="Solstice HVAC LLC Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VrH7M9AiKZt8DYvZbUVL_1fGq-ahR0HbAGZZ9jhi88upXopRS-D0cUIh88pJb1XNYS_PnV2qF7eZiBiB-6j7Wbr0h7dsAffISnGVfZzWfVkE8cgTiZeQCZ3dIPm4QLOYQB-EsP4ezgC32GexdzJK34i5klP31iO8SX4Z4JDSVO7UEfUJzJhXJNwsfikwyYMas3uyfwfHyeXp5YkZDQcdYff-8NBXyEiorARr_cC-B2Lp4gLEYMb3yXfbwN"/><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-on-surface">Solstice HVAC</span></a><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container"><span class="relative flex h-2 w-2"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider">OPEN 24 HOURS // EMERGENCY DISPATCH READY</span></div></div><nav class="hidden lg:flex items-center gap-space-md" data-active-classes="text-on-surface bg-surface-container-high rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs font-label-lg transition-colors text-on-surface bg-surface-container-high rounded-lg" data-path="architecture" href="#">Architecture</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Services</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="flat-rate" href="#">Flat-Rate</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="trust-and-reviews" href="#">Trust &amp; Reviews</a><a class="px-space-sm py-space-xs font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center px-space-md py-space-sm rounded-xl font-label-lg text-label-lg bg-surface-container text-secondary hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors font-medium" href="tel:+12018561897"><span class="material-symbols-outlined text-[18px] mr-space-xs">call</span>+1 (201) 856-1897</a><a class="inline-flex items-center px-space-md py-space-sm rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-[0_1px_4px_rgba(0,0,0,0.12)]" data-path="schedule-service" href="#">Schedule Service</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full">
+<!-- Top Hero Visual Canvas -->
+<section class="relative w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl lg:py-space-xl">
+<div class="flex flex-col gap-space-lg">
+<!-- Micro Meta Bar & Badges -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-secondary font-semibold">Licensed HVAC Contractor • On-Call 24/7/365 • NJ &amp; NY Metro</span>
+</div>
+<a class="group inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-low hover:bg-surface-container transition-all text-on-surface" href="https://maps.app.goo.gl/yE3C9EtsSZs89o7k9" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-caps text-label-caps font-bold">5.0 Star Verified Hub</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant group-hover:translate-x-0.5 transition-transform">arrow_outward</span>
+</a>
+</div>
+<!-- Main Headline & Subtitle Box -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight font-medium max-w-[20ch]">
+            Pure Climate Equilibrium. Engineered for Quiet Living.
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-[55ch]">
+            Master-certified heat pump conversions, zero-sound air conditioning, and 24-hour precision dispatch with absolute diagnostic transparency.
+          </p>
+</div>
+<!-- Hero Actions -->
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm justify-end">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container hover:text-on-primary-container shadow-md transition-all" href="#dispatch-terminal">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+            Schedule Service Dispatch
+          </a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" href="tel:+12018561897">
+<span class="relative flex h-2 w-2 mr-1">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+            Direct Master Line: +1 (201) 856-1897
+          </a>
+</div>
+</div>
+<!-- Hero Visual Frame with Architectural Image & Telemetry Floating Pill -->
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl mt-space-sm">
+<img alt="Solstice HVAC Master Technician inspecting architectural heat pump at golden hour" class="w-full h-[380px] sm:h-[460px] lg:h-[540px] object-cover object-center filter saturate-[1.05]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1yfgeECrhIZpWCMMwzkVJok94UgrN2BlD4FFfqAPolzAZ1YQz-rv87bLdQJ5zp-RQkE90yN8PVPqibo1xJFpO185e7lqERPGDDncUKP5GBAk9Br780Ai-pco5oee_hHppW3PG5IDNBUFc4sMv1Q6VC8yKwz7x1sy5QoSzN7OfBo2c3uhz7M7OJkfUWa81Uby-idHkysiD3sseTO1FjJp7aTm14GZbdOLB4p0kY22e2GQOQQTUxzWusw"/>
+<!-- Ambient Gradient Scrim -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<!-- Telemetry Floating Glass Panel -->
+<div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-auto max-w-xl bg-surface-container-lowest/90 backdrop-blur-md p-space-md rounded-xl shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">timer</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-secondary uppercase font-semibold">Tri-State Rapid Line</p>
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface">Average Arrival &lt; 35 Mins</p>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-variant hidden sm:block"></div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span>100% Guaranteed Upfront Pricing</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Metric Strip: 4 Data Blocks -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-display-hero-mobile lg:font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">24/7/365</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold mt-1">Continuous Dispatch</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Unbroken master technician coverage across all NJ &amp; NY corridors.</p>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-display-hero-mobile lg:font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">100%</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold mt-1">Upfront Flat Rates</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Clear diagnostic quotes approved before any wrench touches your unit.</p>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="font-display-hero-mobile lg:font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">20+ Yrs</span>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold mt-1">Master Craft</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">EPA Universal certified guild specialists with zero subcontracting.</p>
+</div>
+<div class="flex flex-col p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+<div class="flex items-center gap-1">
+<span class="font-display-hero-mobile lg:font-headline-xl text-headline-xl text-on-surface font-semibold tracking-tight">5.0</span>
+<span class="material-symbols-outlined text-[24px] text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold mt-1">Google Verified</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Flawless homeowner reputation across luxury architectural installs.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Architectural Climate Capabilities (4 Minimalist Bento Cards) -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider">Engineered Systems</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-medium mt-1">Architectural Climate Capabilities</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[45ch]">
+        Surgical acoustic control, high SEER2 heat transfer, and seamless interior integration.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1 -->
+<div class="group flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[26px]">heat_pump</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Quiet Heat Pumps</h3>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">SEER2 22+</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ultra-low decibel variable-speed inverter compressors engineered for sub-zero thermal equilibrium.</p>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Diagnostic From <strong class="text-on-surface">$89</strong></span>
+<a class="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:translate-x-1 transition-transform" href="#dispatch-terminal">
+            Dispatch <span class="material-symbols-outlined text-[16px] ml-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[26px]">ac_unit</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Precision AC &amp; Coils</h3>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Subcooling</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Refrigerant mass-flow restoration, electronic thermal expansion tuning, and whisper-level condenser fans.</p>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Tune-Up From <strong class="text-on-surface">$149</strong></span>
+<a class="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:translate-x-1 transition-transform" href="#dispatch-terminal">
+            Inspect <span class="material-symbols-outlined text-[16px] ml-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[26px]">grid_view</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Architectural Mini-Splits</h3>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">Multi-Zone</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Concealed-ducted and flush ceiling cassette formats tailored directly to modern interior envelopes.</p>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Plan From <strong class="text-on-surface">Consult</strong></span>
+<a class="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:translate-x-1 transition-transform" href="#dispatch-terminal">
+            Design <span class="material-symbols-outlined text-[16px] ml-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all">
+<div>
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center text-secondary mb-space-md group-hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-[26px]">air</span>
+</div>
+<div class="flex items-center justify-between mb-space-xs">
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Whole-Home Air Purity</h3>
+<span class="font-label-caps text-label-caps px-2 py-0.5 rounded bg-surface-container text-secondary font-medium">HEPA / ERV</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Balanced energy recovery ventilators, hospital-grade filtration, and silent relative humidity regulators.</p>
+</div>
+<div class="pt-space-lg mt-space-md flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Testing From <strong class="text-on-surface">$129</strong></span>
+<a class="inline-flex items-center text-secondary font-label-lg text-label-lg group-hover:translate-x-1 transition-transform" href="#dispatch-terminal">
+            Measure <span class="material-symbols-outlined text-[16px] ml-0.5">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Editorial Craftsmanship Showcase (Split Grid with IMAGE_83) -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left: Image Showcase -->
+<div class="lg:col-span-6 relative">
+<div class="rounded-2xl overflow-hidden shadow-lg">
+<img alt="Master HVAC Technician using digital diagnostic tablet in luxury mechanical room" class="w-full h-[400px] lg:h-[480px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAK2L1m3ZGU6WevlAuI5QRgTysGN4bq2kpnvEdKFzM-UKQWsuhfilVje6IxSOJUuEgyleXvMg2TyCAynixAEhgjjjzceJEACIgvgxLHVggOD9N2sRCjIJwR_QVOAizYxRjjI9ZC0SITHLtA7ZfnLq9mPcwcasc2CGBzA5G9_WrgHyAuzC5ciqAgk4O_m07nu3yUi86HZfpwMlz0cMHTlioZQ8j-dovfCVTLRKzQzOL6xP0uiwC2qt_P_A"/>
+</div>
+<!-- Tactile Stat Overhang -->
+<div class="absolute -bottom-4 right-4 bg-primary text-on-primary p-space-md rounded-xl shadow-md hidden sm:flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[28px]">speed</span>
+<div>
+<p class="font-headline-sm text-headline-sm font-semibold">0.1 CFM</p>
+<p class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-wider">Calibration Tolerance</p>
+</div>
+</div>
+</div>
+<!-- Right: Diagnostics Redefined -->
+<div class="lg:col-span-6 flex flex-col gap-space-md lg:pl-space-lg">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider">Engineering Standards</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-medium mt-1">Diagnostics Redefined.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+              Traditional HVAC guesswork is replaced by calibrated digital telemetry and master-level protocol.
+            </p>
+</div>
+<div class="flex flex-col gap-space-sm">
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">tune</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Digital Manifold Precision</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Exact subcooling, superheat, and static airflow curves verified with Bluetooth micro-sensors.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">sanitizer</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Clean Sanctuary Promise</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Surgical surface runners, magnetic tool mats, and spotless cleanups leaving zero dust or residue behind.</p>
+</div>
+</div>
+<div class="p-space-md rounded-xl bg-surface-container-lowest flex items-start gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">support_agent</span>
+</div>
+<div>
+<h4 class="font-label-lg text-label-lg font-semibold text-on-surface">Direct Master Tech Dispatch</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Zero third-party operators. You interface directly with certified diagnostic leaders who know your system.</p>
+</div>
+</div>
+</div>
+<div class="pt-space-xs">
+<a class="inline-flex items-center gap-space-xs font-label-lg text-label-lg text-secondary hover:text-on-surface transition-colors" href="tel:+12018561897">
+<span class="material-symbols-outlined text-[18px]">call</span>
+              Speak with a lead master engineer: +1 (201) 856-1897
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Upfront Flat-Rate Membership & Service Pricing (3 Minimalist Cards) -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl">
+<div class="text-center max-w-[65ch] mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider">Transparent Calibration</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-medium mt-1">Flat-Rate Upfront Pricing</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+        No overtime rates, no inflated parts multipliers, and zero hidden diagnostic travel fees.
+      </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-stretch">
+<!-- Tier 1 -->
+<div class="flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">Immediate Assessment</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Standard Diagnostic</h3>
+<div class="mt-space-md flex items-baseline gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile font-semibold text-on-surface">$89</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ flat callout</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium mt-1">100% Waived when repair authorized</p>
+<ul class="mt-space-lg flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Complete electrical &amp; amp-draw telemetry
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Refrigerant pressure &amp; leak sweep
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Written itemized proposal before repair
+            </li>
+</ul>
+</div>
+<a class="w-full mt-space-xl py-space-sm px-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-surface-container-high transition-colors" href="#dispatch-terminal">
+          Book Diagnostic
+        </a>
+</div>
+<!-- Tier 2 (Featured Solar Gold) -->
+<div class="relative flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-md ring-2 ring-secondary-container">
+<div class="absolute -top-3 left-1/2 -translate-x-1/2 px-space-sm py-0.5 rounded-full bg-secondary text-on-secondary font-label-caps text-label-caps font-semibold uppercase tracking-wider">
+          Most Popular Service
+        </div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase font-semibold">Preventative Perfection</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Seasonal Precision Tune-Up</h3>
+<div class="mt-space-md flex items-baseline gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile font-semibold text-on-surface">$149</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ per system</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Restore factory thermal efficiency</p>
+<ul class="mt-space-lg flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              24-Point complete electrical &amp; coil wash
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Capacitor &amp; blower motor impedance check
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Condensate drain flush &amp; microbial treatment
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Airflow &amp; Delta-T thermal efficiency check
+            </li>
+</ul>
+</div>
+<a class="w-full mt-space-xl py-space-sm px-space-md rounded-xl bg-primary text-on-primary font-label-lg text-label-lg text-center hover:bg-primary-container hover:text-on-primary-container shadow-sm transition-all" href="#dispatch-terminal">
+          Reserve Calibration
+        </a>
+</div>
+<!-- Tier 3 -->
+<div class="flex flex-col justify-between p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase font-semibold">VIP Residence Retainer</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold mt-1">Sanctuary Shield</h3>
+<div class="mt-space-md flex items-baseline gap-1">
+<span class="font-display-hero-mobile text-display-hero-mobile font-semibold text-on-surface">$249</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ annual</span>
+</div>
+<p class="font-body-sm text-body-sm text-secondary font-medium mt-1">Priority queue + peak protection</p>
+<ul class="mt-space-lg flex flex-col gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Two comprehensive seasonal tune-ups (Heat/AC)
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Guaranteed &lt; 2-hour priority emergency queue
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              15% discount on all repairs &amp; hardware
+            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">check</span>
+              Zero holiday or emergency dispatch surcharges
+            </li>
+</ul>
+</div>
+<a class="w-full mt-space-xl py-space-sm px-space-md rounded-xl bg-surface-container text-on-surface font-label-lg text-label-lg text-center hover:bg-surface-container-high transition-colors" href="#dispatch-terminal">
+          Enroll Residence
+        </a>
+</div>
+</div>
+</section>
+<!-- Verified Homeowner Proof & Google Maps Link Hub -->
+<section class="w-full bg-surface-container-low py-space-xl">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Google Hub Card -->
+<div class="lg:col-span-5 p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs mb-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">verified_user</span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Google Verified Business</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Solstice HVAC LLC</h3>
+<div class="flex items-center gap-space-xs mt-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface ml-1">5.0</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(Tri-State Verified)</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-md">
+              Serving Bergen, Hudson, Essex, Morris, and greater New York metro residences with prompt master-level mechanical service.
+            </p>
+</div>
+<div class="pt-space-lg flex flex-col gap-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors" href="https://maps.app.goo.gl/yE3C9EtsSZs89o7k9" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px] text-secondary">map</span>
+              Open in Google Maps &amp; Read Reviews
+            </a>
+<span class="text-center font-label-caps text-label-caps text-on-surface-variant mt-1">Master Tech On-Call • Real-time GPS Dispatch</span>
+</div>
+</div>
+<!-- 2 Verified Testimonial Cards -->
+<div class="lg:col-span-7 flex flex-col gap-gutter">
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-normal italic">
+                “Our multi-zone heat pump stopped cooling in the middle of a July heatwave. Solstice had a master technician at our door in 28 minutes. No upselling, upfront price locked on the spot, and our home was back at 68 degrees within the hour.”
+              </p>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Julian V. • Alpine, NJ</span>
+<span class="font-label-caps text-label-caps text-secondary font-medium">Verified Customer</span>
+</div>
+</div>
+<div class="p-space-lg rounded-2xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface font-normal italic">
+                “The quietest HVAC installation I have ever experienced. They calibrated the ductwork down to zero acoustic vibration. Total respect for our home, zero mess, and impeccable professionalism.”
+              </p>
+</div>
+<div class="flex items-center justify-between mt-space-md pt-space-xs">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">Claire M. • Hoboken, NJ</span>
+<span class="font-label-caps text-label-caps text-secondary font-medium">Architectural Client</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Minimalist FAQ (3 Questions) -->
+<section class="w-full max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl">
+<div class="max-w-[800px] mx-auto flex flex-col gap-space-lg">
+<div class="text-center">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold tracking-wider">Clear Clarity</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-medium mt-1">Frequently Asked Questions</h2>
+</div>
+<div class="flex flex-col gap-space-xs" id="solstice-faq-container">
+<!-- FAQ Item 1 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<button aria-expanded="true" class="faq-trigger w-full px-space-md py-space-md flex items-center justify-between text-left font-headline-sm text-headline-sm text-on-surface font-semibold hover:bg-surface-container-low transition-colors" type="button">
+<span>Are emergency dispatch services genuinely available 24 hours?</span>
+<span class="material-symbols-outlined faq-icon text-secondary transition-transform rotate-180">expand_more</span>
+</button>
+<div class="faq-panel px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md block">
+            Yes. Solstice HVAC maintains an active on-call master technician rota 24 hours a day, 365 days a year. When you dial +1 (201) 856-1897, you reach certified mechanical dispatchers capable of immediate dispatch across the Tri-State area.
+          </div>
+</div>
+<!-- FAQ Item 2 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-center justify-between text-left font-headline-sm text-headline-sm text-on-surface font-semibold hover:bg-surface-container-low transition-colors" type="button">
+<span>How does your upfront flat-rate pricing work?</span>
+<span class="material-symbols-outlined faq-icon text-secondary transition-transform">expand_more</span>
+</button>
+<div class="faq-panel px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md hidden">
+            We provide fixed, transparent quotes based on calibrated diagnostics before starting any repair work. The initial $89 diagnostic fee is completely waived if you choose to proceed with the recommended repair. No surprise hourly charges or unapproved fees.
+          </div>
+</div>
+<!-- FAQ Item 3 -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden">
+<button aria-expanded="false" class="faq-trigger w-full px-space-md py-space-md flex items-center justify-between text-left font-headline-sm text-headline-sm text-on-surface font-semibold hover:bg-surface-container-low transition-colors" type="button">
+<span>What system brands and architectures do you service?</span>
+<span class="material-symbols-outlined faq-icon text-secondary transition-transform">expand_more</span>
+</button>
+<div class="faq-panel px-space-md pb-space-md pt-0 text-on-surface-variant font-body-md text-body-md hidden">
+            Our guild engineers are master-certified across all premier HVAC manufacturers including Mitsubishi Diamond, Daikin, Trane, Carrier, Bosch, and Lennox, with specialized training in concealed architectural mini-splits and ultra-high efficiency variable inverters.
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Priority 24/7 Dispatch Booking Terminal (Streamlined & Minimalist) -->
+<section class="w-full bg-primary text-on-primary py-space-xl" id="dispatch-terminal">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<!-- Left: Emergency Call Direct Info -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-primary-container text-on-primary-container w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-label-caps text-label-caps uppercase text-secondary font-semibold">Priority Dispatch Active</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-primary font-medium tracking-tight">
+            Initiate Service Dispatch.
+          </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim">
+            Submit your priority ticket below for instant routing, or call directly for emergency heating &amp; cooling dispatch.
+          </p>
+<div class="p-space-md rounded-xl bg-primary-container flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-on-secondary shrink-0">
+<span class="material-symbols-outlined text-[24px]">phone_in_talk</span>
+</div>
+<div>
+<p class="font-label-caps text-label-caps uppercase text-primary-fixed-dim">Immediate Voice Dispatch</p>
+<a class="font-headline-sm text-headline-sm font-semibold text-on-primary hover:text-secondary-fixed transition-colors" href="tel:+12018561897">
+                +1 (201) 856-1897
+              </a>
+</div>
+</div>
+</div>
+<!-- Right: Minimalist 3-Field Booking Terminal -->
+<div class="lg:col-span-7">
+<div class="p-space-lg sm:p-space-xl rounded-2xl bg-surface text-on-surface shadow-xl">
+<form class="flex flex-col gap-space-md" id="dispatch-form">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-caps text-label-caps text-on-surface font-semibold uppercase tracking-wider" for="client-name">Full Name</label>
+<input class="w-full px-space-md py-space-sm rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary transition-all" id="client-name" name="fullName" placeholder="e.g. Eleanor Vance" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-caps text-label-caps text-on-surface font-semibold uppercase tracking-wider" for="client-phone">Phone Number (For Immediate Dispatch)</label>
+<input class="w-full px-space-md py-space-sm rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary transition-all" id="client-phone" name="phoneNumber" placeholder="+1 (201) 000-0000" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-caps text-label-caps text-on-surface font-semibold uppercase tracking-wider" for="service-type">Service Needed</label>
+<select class="w-full px-space-md py-space-sm rounded-xl bg-surface-container-lowest text-on-surface font-body-md text-body-md outline-none focus:ring-2 focus:ring-secondary transition-all cursor-pointer" id="service-type" name="serviceNeeded">
+<option value="Emergency Diagnostic ($89)">Emergency Diagnostic ($89 - Waived with repair)</option>
+<option value="Seasonal Precision Tune-Up ($149)">Seasonal Precision Tune-Up ($149)</option>
+<option value="Heat Pump / Inverter Replacement">Heat Pump / Inverter Replacement Consultation</option>
+<option value="Architectural Ductless Mini-Split">Architectural Ductless Mini-Split Design</option>
+<option value="Air Quality / Humidification">Whole-Home Air Purity Assessment</option>
+</select>
+</div>
+<button class="w-full mt-space-sm py-space-md px-space-lg rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container hover:text-on-primary-container shadow-md transition-all flex items-center justify-center gap-space-xs" id="submit-dispatch-btn" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                Request Rapid Dispatch
+              </button>
+<div class="hidden p-space-sm rounded-lg bg-surface-container text-secondary text-center font-label-lg text-label-lg" id="form-success-banner">
+<span class="material-symbols-outlined text-[18px] align-middle mr-1">check_circle</span>
+                Priority ticket transmitted. A master technician is reviewing your location now.
+              </div>
+<div class="flex items-center justify-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm text-center">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Direct encrypted routing • No marketing calls • Immediate dispatch protocol</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Client-Side Micro-Interactions Script -->
+<script>
+    // FAQ Accordion Behavior
+    document.querySelectorAll('.faq-trigger').forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const panel = trigger.nextElementSibling;
+        const icon = trigger.querySelector('.faq-icon');
+        const isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+
+        // Close all
+        document.querySelectorAll('.faq-panel').forEach(p => p.classList.add('hidden'));
+        document.querySelectorAll('.faq-trigger').forEach(t => {
+          t.setAttribute('aria-expanded', 'false');
+          const i = t.querySelector('.faq-icon');
+          if (i) i.classList.remove('rotate-180');
+        });
+
+        // Toggle clicked
+        if (!isExpanded) {
+          panel.classList.remove('hidden');
+          trigger.setAttribute('aria-expanded', 'true');
+          if (icon) icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // Dispatch Terminal Form Feedback
+    const dispatchForm = document.getElementById('dispatch-form');
+    const submitBtn = document.getElementById('submit-dispatch-btn');
+    const successBanner = document.getElementById('form-success-banner');
+
+    if (dispatchForm) {
+      dispatchForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">refresh</span> Dispatching...';
+
+        setTimeout(() => {
+          submitBtn.classList.add('hidden');
+          successBanner.classList.remove('hidden');
+        }, 800);
+      });
+    }
+  </script>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"><div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl"><div class="grid grid-cols-1 md:grid-cols-12 gap-gutter pb-space-xl"><div class="md:col-span-5 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-on-surface tracking-tight">Solstice HVAC LLC</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-[50ch]">Architectural heating, ventilation, and precision cooling systems engineered for luxury residences and bespoke structures. Uncompromised acoustic silence and continuous thermal mastery.</p><div class="flex items-center gap-space-sm"><span class="relative flex h-2 w-2"><span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span></span><span class="font-label-caps text-label-caps text-secondary font-semibold uppercase tracking-wider">24 Hours Availability // Master Tech Line Active</span></div></div><div class="md:col-span-3 flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-wider mb-space-xs">Operations &amp; Dispatch</span><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="https://maps.app.goo.gl/yE3C9EtsSZs89o7k9" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span>Google Maps Verified Hub</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-xs" href="tel:+12018561897"><span class="material-symbols-outlined text-[16px] text-secondary">call</span>+1 (201) 856-1897</a><span class="font-body-sm text-body-sm text-on-surface-variant">Rapid Dispatch: Tri-State Architectural Corridor</span></div><div class="md:col-span-4 flex flex-col gap-space-sm"><span class="font-label-caps text-label-caps uppercase text-on-surface font-semibold tracking-wider mb-space-xs">Atelier Navigation</span><div class="grid grid-cols-2 gap-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="architecture" href="#">Architecture</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="services" href="#">Services</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="flat-rate" href="#">Flat-Rate Pricing</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="trust-and-reviews" href="#">Trust &amp; Reviews</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="schedule-service" href="#">Dispatch Booking</a></div></div></div><div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-md"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Solstice HVAC LLC. All rights reserved. Licensed &amp; Insured Master Contractor.</span><div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-on-surface transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-on-surface transition-colors" data-path="terms-of-service" href="#">Terms of Service</a><a class="hover:text-on-surface transition-colors" data-path="warranty" href="#">Mechanical Warranty</a></div></div></div></footer></body></html>
